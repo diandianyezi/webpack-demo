@@ -7,7 +7,7 @@ body {
 body h1 {
   color: blue;
 }
-body img {
+body .img {
   width: 200px;
   height: 200px;
   background-image: url(../images/b79910bd49fbe5a87475.jpeg);

@@ -9,10 +9,18 @@ module.exports = {
     entry: './src/index.js',
 
     output: {
-        filename: 'js/built.js',
+        filename: 'js/[name].bundle.js',
         // 当前文件的目录绝对路径
-        path: resolve(__dirname, 'build'),
-        assetModuleFilename: 'images/[hash][ext][query]'
+        path: resolve(__dirname, 'dist'),
+        assetModuleFilename: 'images/[hash][ext][query]',
+        clean: true
+    },
+    devtool: 'inline-source-map',
+    devServer: {
+        static: './dist'
+    },
+    optimization: {
+        runtimeChunk: 'single',
     },
     module: {
         rules: [
@@ -118,8 +126,7 @@ module.exports = {
     },
     plugins: [
         new HtmlWebpackPlugin({
-            template: './src/index.html',
-            title: 'webpack 初体验'
+            title: '开发模式'
         }),
         new MiniCssExtractPlugin({
             filename: 'css/built.css'
@@ -127,3 +134,4 @@ module.exports = {
     ],
     mode: 'development' // 'production 模式
 }
+

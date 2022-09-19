@@ -3,30 +3,16 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "dependencies": {
-    "css-loader": "^6.2.0",
-    "html-loader": "^2.1.2",
-    "html-webpack-plugin": "^5.3.2",
-    "less": "^4.1.1",
-    "less-loader": "^10.0.1",
-    "mini-css-extract-plugin": "^2.2.0",
-    "postcss-loader": "^6.1.1",
-    "postcss-preset-env": "^6.7.0",
-    "style-loader": "^3.2.1",
-    "webpack": "^5.51.1",
-    "webpack-cli": "^4.8.0",
-    "webpack-dev-server": "^4.0.0"
-  },
+  "dependencies": {},
   "devDependencies": {
-    "file-loader": "^6.2.0",
-    "optimize-css-assets-webpack-plugin": "^6.0.1",
-    "postcss": "^8.3.6",
-    "url-loader": "^4.1.1"
+    "webpack-dev-middleware": "^5.3.3"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build" : "webpack",
-    "watch": "webpack --watch"
+    "build": "webpack",
+    "watch": "webpack --watch",
+    "dev": "webpack serve --open",
+    "server": "node server.js"
   },
   "repository": {
     "type": "git",
